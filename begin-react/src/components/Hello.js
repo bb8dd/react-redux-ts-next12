@@ -1,7 +1,11 @@
 import React from 'react';
 
-export default function Hello() {
+export default function Hello({ color, name }) {
   return (
-    <div>Hello</div>
+    <div style={{ color }}>
+      Hello,
+      {' '}
+      {name}
+    </div>
   );
 }
