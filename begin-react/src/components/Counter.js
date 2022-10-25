@@ -4,12 +4,15 @@ export default function Counter() {
   const [number, setNumber] = useState(0);
 
   const onIncrease = () => {
-    setNumber(number + 1);
-    return number;
+    setNumber((prevNumber) => prevNumber + 1);
   };
   const onDecrease = () => {
-    setNumber(number - 1);
-    return number;
+    setNumber((prevNumber) => {
+      if (prevNumber === 0) {
+        return 0;
+      }
+      return prevNumber - 1;
+    });
   };
   return (
     <div>
