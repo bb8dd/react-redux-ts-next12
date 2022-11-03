@@ -22,3 +22,5 @@
    import {foo as f } from 'foo.js'
    // 전부 같은 거임
    ```
+
+* class ES6
