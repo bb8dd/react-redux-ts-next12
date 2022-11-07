@@ -30,3 +30,5 @@
    - constructor 메서드 생략 및 this 바인딩 생략
    - 클래스 상속 시 사용하는 super() 생략
    - 메소드 생성시에 화살표 함수 사용
+
+* spread 연산자, rest 연산자
