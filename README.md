@@ -78,3 +78,8 @@
     * map, filter, concat ...
   
   * promise, async await, try catch, optional paramter
+
+
+
+  * reference error cannot access before initialization
+    * TDZ 때문에 발생하는 오류
