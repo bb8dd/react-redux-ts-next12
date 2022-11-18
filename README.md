@@ -83,3 +83,9 @@
 
   * reference error cannot access before initialization
     * TDZ 때문에 발생하는 오류
+
+  * interface vs type alias 
+    * 공통점
+     - 타입 정의
+    * 차이점
+     - interface로 타입 정의를 할 경우 선언 병합이 가능
