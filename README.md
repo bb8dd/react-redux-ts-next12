@@ -89,3 +89,5 @@
      - 타입 정의
     * 차이점
      - interface로 타입 정의를 할 경우 선언 병합이 가능
+
+  * optional type 설정
