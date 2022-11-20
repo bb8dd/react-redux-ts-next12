@@ -91,3 +91,11 @@
      - interface로 타입 정의를 할 경우 선언 병합이 가능
 
   * optional type 설정
+
+  * Why Componets ? 
+    * 재사용성
+    * 분리성 ( 작은 단위로 관리할 수 있음)
+    
+  * How is A Componet Built?
+  
+  * What is a Components ?
