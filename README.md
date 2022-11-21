@@ -68,7 +68,7 @@
     const person2 = person
     const person3 = {
       ...person
-    }
+    } 
 
     person.name = 'dd8bb'
 
@@ -80,22 +80,43 @@
   * promise, async await, try catch, optional paramter
 
 
-
+# trobleShooting
   * reference error cannot access before initialization
     * TDZ 때문에 발생하는 오류
 
+# React
+  * Why Componets ? 
+    * 재사용성
+    * 분리성 ( 작은 단위로 관리할 수 있음 )
+   * HTML + JS + CSS로 결합된 재사용 가능한 컴포넌트를 만들기 위해서 선언적 접근 방식을 사용
+
+  * SPA(Single Page Application)
+   - 하나의 HTML(index.html)만을 사용
+
+  * index.js
+    * 실행 시 가장 먼저 실행되는 파일
+    * createRoot : React에서 렌더링할 곳 고르는 메서드
+    * render : 말 그대로 렌더링 함 {렌더링할 곳.render(element)}
+
+
+# Question
+
+## typescript
   * interface vs type alias 
     * 공통점
      - 타입 정의
     * 차이점
      - interface로 타입 정의를 할 경우 선언 병합이 가능
 
-  * optional type 설정
+  * optional type, default props
+    ??? : optional type으로 타입 정의하고 optional parameter 쓰면 defaultProps 안 써도 되지 않나?
+    dan : ㅇㅇ defaultProps 이제 안 씀 (트위터)
+    ```ts
+    interface GreetProps = {
+      age?: number;
+    }
 
-  * Why Componets ? 
-    * 재사용성
-    * 분리성 ( 작은 단위로 관리할 수 있음)
-    
-  * How is A Componet Built?
-  
-  * What is a Components ?
+    const Greet = ({age = 21} : GreetProps) => {
+      // empty
+    }
+    ```
