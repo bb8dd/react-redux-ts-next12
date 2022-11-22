@@ -79,10 +79,7 @@
   
   * promise, async await, try catch, optional paramter
 
-
-# trobleShooting
-  * reference error cannot access before initialization
-    * TDZ 때문에 발생하는 오류
+---
 
 # React
   * Why Componets ? 
@@ -98,8 +95,13 @@
     * createRoot : React에서 렌더링할 곳 고르는 메서드
     * render : 말 그대로 렌더링 함 {렌더링할 곳.render(element)}
 
+---
 
 # Question
+
+## JavaScript
+
+## React
 
 ## typescript
   * interface vs type alias 
@@ -119,4 +121,10 @@
     const Greet = ({age = 21} : GreetProps) => {
       // empty
     }
+
+---
+
+# trobleShooting
+  * reference error cannot access before initialization
+    * TDZ 때문에 발생하는 오류
     ```
