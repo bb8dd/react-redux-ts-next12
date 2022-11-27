@@ -85,7 +85,8 @@
   * Why Componets ? 
     * 재사용성
     * 분리성 ( 작은 단위로 관리할 수 있음 )
-   * HTML + JS + CSS로 결합된 재사용 가능한 컴포넌트를 만들기 위해서 선언적 접근 방식을 사용
+    * HTML + JS + CSS로 결합된 재사용 가능한 컴포넌트를 만듦
+    * 선언적 접근 방식을 사용(선언형 프로그래밍)
 
   * SPA(Single Page Application)
    - 하나의 HTML(index.html)만을 사용
@@ -95,11 +96,24 @@
     * createRoot : React에서 렌더링할 곳 고르는 메서드
     * render : 말 그대로 렌더링 함 {렌더링할 곳.render(element)}
 
+  * JSX
+    * javascript의 확장 문법
+    * element를 사용할 수 있음
+    * React는 JSX를 사용하여 개발자가 작성하기 쉽고 브러우저가 이해할 수 있는 코드로 변환해줌
+    * 개발자 도구 soruce에서 변환된 코드를 확인할 수 있음
+    * 변환된 코드들은 개발자가 작성한 코드뿐만 아니라, 전체 리액트 패키지를 변환한 것
+
+  * React 작동 방식
+    * 선언형 프로그래밍 방식으로 작동
+    * 일반적인 javascript는 명령형으로 단계별로 지시(element 생성 => 추가할 곳 선택 => 추가)를 내려야 하는 반면, 리액트는 최종상태를 정의하여 위치에 선언하는 방식으로 컴포넌트 개념을 채택함 
+
 ---
 
 # Question
 
 ## JavaScript
+  * 명령형 프로그래밍 vs 선언형 프로그래밍
+    *
 
 ## React
 
