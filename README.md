@@ -106,6 +106,15 @@
   * React 작동 방식
     * 선언형 프로그래밍 방식으로 작동
     * 일반적인 javascript는 명령형으로 단계별로 지시(element 생성 => 추가할 곳 선택 => 추가)를 내려야 하는 반면, 리액트는 최종상태를 정의하여 위치에 선언하는 방식으로 컴포넌트 개념을 채택함 
+  
+  * App.js의 역할
+    * Components Tree의 최상단으로 index.js에서 렌더링 될 때 최상단에 있는 App.js가 렌더링 됨
+    * 렌더링 하고자 하는 컴포넌트들이 모임
+
+  * React 규칙
+    * Custom Element는 반드시 대문자로 시작해야 함
+    * 소문자로 시작하는 element는 내부 HTML요소로 인식 함
+    * index.js는 root Component를 위해 한번만 하는 작업 
 
 ---
 
