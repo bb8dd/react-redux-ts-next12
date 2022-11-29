@@ -114,7 +114,18 @@
   * React 규칙
     * Custom Element는 반드시 대문자로 시작해야 함
     * 소문자로 시작하는 element는 내부 HTML요소로 인식 함
-    * index.js는 root Component를 위해 한번만 하는 작업 
+    * index.js는 root Component를 위해 한번만 하는 작업
+    * 반드시 1개의 root element만을 반환(return)해야 함 
+    ```jsx
+    function foo() {
+      return (
+        <div>
+          <div>title</div>
+          <div>Date</div>
+        </div>
+      )
+    }
+    ```
 
 ---
 
@@ -125,6 +136,8 @@
     *
 
 ## React
+  * 왜 useState를 작성할 때 const를 사용하여 선언했는데 값을 바꿀 수 있음?
+  * useState에 파라미터형식과 함수형 업데이트 방식의 차이점은 무엇?
 
 ## typescript
   * interface vs type alias 
