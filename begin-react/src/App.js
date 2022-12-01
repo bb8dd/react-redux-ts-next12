@@ -7,19 +7,19 @@ function App() {
       id: 1,
       title: 'Car',
       amount: 300,
-      date: new Date().toISOString(),
+      date: new Date(2020, 7, 14),
     },
     {
       id: 2,
       title: 'Phone',
       amount: 100,
-      date: '2022. 12. 1',
+      date: new Date(2022, 12, 1),
     },
     {
       id: 3,
       title: 'Watch',
       amount: 200,
-      date: '2022. 11. 30',
+      date: new Date(2021, 3, 29),
     },
   ];
 
