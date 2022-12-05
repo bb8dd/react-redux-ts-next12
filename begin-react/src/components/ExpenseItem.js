@@ -2,15 +2,15 @@ import React from 'react';
 import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 
-export default function ExpenseItem({ data }) {
+export default function ExpenseItem(date, title, amount) {
   return (
     <div className="expense-item">
-      <ExpenseDate date={data.date} />
+      <ExpenseDate date={date} />
       <div className="expense-item__description">
-        <h2>{data.title}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">
           $
-          {data.amount}
+          {amount}
         </div>
       </div>
     </div>
