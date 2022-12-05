@@ -2,7 +2,7 @@ import React from 'react';
 import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 
-export default function ExpenseItem(date, title, amount) {
+export default function ExpenseItem({ date, title, amount }) {
   return (
     <div className="expense-item">
       <ExpenseDate date={date} />
