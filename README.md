@@ -128,6 +128,20 @@
     ```
   * props.children
     * react의 예약어로 컴포넌트 내부에 있는 컴포넌트를 받아옴
+    * children 속성은 기본적으로 props에서 존재함
+    ```js
+    function(props) {
+      const children = props.children 
+      console.log(children) // <div>title<div>
+
+      return (
+        <div>
+          {children}
+        <div>
+      )
+      // <div><div>title</div></div>
+    }
+    ```
     
 
 ---
