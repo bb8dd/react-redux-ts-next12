@@ -115,8 +115,8 @@
     * Custom Element는 반드시 대문자로 시작해야 함
     * 소문자로 시작하는 element는 내부 HTML요소로 인식 함
     * index.js는 root Component를 위해 한번만 하는 작업
-    * 반드시 1개의 root element만을 반환(return)해야 함 
-    ```jsx
+    * 반드시 1개의 root element만을 반환(return)해야 함 (JSX)
+    ```js
     function foo() {
       return (
         <div>
@@ -126,6 +126,21 @@
       )
     }
     ```
+      * 반드시 1개의 root element(wrapper)만을 반환해야 하는 이유
+        - jsx코드는 사용자가 읽고 쓰기 간편하게 되어있지만 변환과정에서 React.createElemet()를 사용하여 html코드를 만들어 반환
+        - 반환과정에서 각각의 요소로 취급되기 때문에 항상 wrppaer로 wrapping해주어서 반환해주어야 함
+        ```js
+        return React.createElemnet(
+          'div', // 생성할 HTML 요소
+          {items: expense}, // 속성
+          React.createElement(
+            'h2',
+            {},
+            'Title'
+          ) // 요소 내부
+        )
+        ```
+
   * props.children
     * react의 예약어로 컴포넌트 내부에 있는 컴포넌트를 받아옴
     * children 속성은 기본적으로 props에서 존재함
