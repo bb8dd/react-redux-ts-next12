@@ -1,40 +1,40 @@
 # javaScript Refresh
 
 * export, import
- * export default와 export의 차이점
-   - export시 default를 사용한 경우
-   ```
-   // foo.js
-   export default function foo() {}
-
-   // bar.js
-   import f from 'foo.js' === import foo from 'foo.js'
-   ```
-   - export만 사용한 경우
-   ```
-   //foo.js
-   export frunction foo() {}
-   export const bar = () => {}
-
-   //baz.js 
-   import {foo, bar} from 'foo.js'
-   import * as fb from 'foo.js'
-   import {foo as f } from 'foo.js'
-   // 전부 같은 거임
-   ```
+   * export default와 export의 차이점
+      - export시 default를 사용한 경우
+      ```
+      // foo.js
+      export default function foo() {}
+      
+      // bar.js
+      import f from 'foo.js' === import foo from 'foo.js'
+      ```
+      - export만 사용한 경우
+      ```
+      //foo.js
+      export frunction foo() {}
+      export const bar = () => {}
+      
+      //baz.js 
+      import {foo, bar} from 'foo.js'
+      import * as fb from 'foo.js'
+      import {foo as f } from 'foo.js'
+      // 전부 같은 거임
+      ```
 
 * class 
- * 생성자 함수와 유사함
- * 상속할 수 있음
- * ES6 => ES7 변한 점
-   - constructor 메서드 생략 및 this 바인딩 생략
-   - 클래스 상속 시 사용하는 super() 생략
-   - 메소드 생성시에 화살표 함수 사용
+   * 생성자 함수와 유사함
+   * 상속할 수 있음
+* ES6 => ES7 변한 점
+   * constructor 메서드 생략 및 this 바인딩 생략
+   * 클래스 상속 시 사용하는 super() 생략
+   * 메소드 생성시에 화살표 함수 사용
 
 * spread 연산자, rest 연산자
- * 어디에서 사용하는 지에 따라 spread와 rest로 나뉨
-  - array or Object : spread
-  - arguments : rest
+   * 어디에서 사용하는 지에 따라 spread와 rest로 나뉨
+      - array or Object : spread
+      - arguments : rest
 
 * 구조분해할당(Destructuring)
   * Array
@@ -53,14 +53,13 @@
     }
     const { name, age } = person;
     console.log(name, age); // bb8dd, 14
-  
-  * 기본형과 참조형 데이터
+ * 기본형과 참조형 데이터
    * 기본형
-    - string, boolean, number ..
+      - string, boolean, number ..
    * 참조형
-    - array, object
-    - 참조형 데이터 타입은 복사할 때 객체의 프로퍼티나 요소를 복사하는 것이 복사본을 만드는 것
-    - 이미 만들어진 참조형 타입의 데이터를 할당 할 경우 포인터를 복사하기 때문에 할당한 데이터가 변경되면 할당 받은 변수도 데이터값이 변함
+      - array, object
+      - 참조형 데이터 타입은 복사할 때 객체의 프로퍼티나 요소를 복사하는 것이 복사본을 만드는 것
+      - 이미 만들어진 참조형 타입의 데이터를 할당 할 경우 포인터를 복사하기 때문에 할당한 데이터가 변경되면 할당 받은 변수도 데이터값이 변함
     ```
     const person = {
       name : 'bb8dd',
@@ -185,8 +184,8 @@
      - interface로 타입 정의를 할 경우 선언 병합이 가능
 
   * optional type, default props
-    ??? : optional type으로 타입 정의하고 optional parameter 쓰면 defaultProps 안 써도 되지 않나?
-    dan : ㅇㅇ defaultProps 이제 안 씀 (트위터)
+   - ??? : optional type으로 타입 정의하고 optional parameter 쓰면 defaultProps 안 써도 되지 않나?
+   - dan : ㅇㅇ defaultProps 이제 안 씀 (트위터)
     ```ts
     interface GreetProps = {
       age?: number;
