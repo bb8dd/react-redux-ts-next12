@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 import Card from '../UI/Card';
 
 export default function ExpenseItem(props) {
-  const { date, title, amount } = props;
+  const { date, dataTitle, amount } = props;
+
+  const [title, setTitle] = useState(dataTitle);
+
   const onClick = () => {
-    console.log('update Title');
+    setTitle('Update Title');
   };
 
   return (
