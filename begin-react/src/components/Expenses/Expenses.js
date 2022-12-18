@@ -6,7 +6,14 @@ import './Expenses.css';
 export default function Expenses({ data }) {
   return (
     <Card className="expenses">
-      {data.map(((e) => <ExpenseItem date={e.date} title={e.title} amount={e.amount} />))}
+      {data.map(((e) => (
+        <ExpenseItem
+          key={e.id}
+          date={e.date}
+          title={e.title}
+          amount={e.amount}
+        />
+      )))}
     </Card>
   );
 }
