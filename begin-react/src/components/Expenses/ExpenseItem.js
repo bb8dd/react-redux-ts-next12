@@ -4,6 +4,8 @@ import './ExpenseItem.css';
 import Card from '../UI/Card';
 
 export default function ExpenseItem({ date, title, amount }) {
+  const onClick = () => { console.log('Clicked'); };
+
   return (
     <Card className="expense-item">
       <ExpenseDate date={date} />
@@ -14,6 +16,7 @@ export default function ExpenseItem({ date, title, amount }) {
           {amount}
         </div>
       </div>
+      <button type="button" onClick={onClick}>Change Title</button>
     </Card>
   );
 }
