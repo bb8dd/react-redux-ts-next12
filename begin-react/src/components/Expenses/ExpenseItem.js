@@ -3,8 +3,11 @@ import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 import Card from '../UI/Card';
 
-export default function ExpenseItem({ date, title, amount }) {
-  const onClick = () => { console.log('Clicked'); };
+export default function ExpenseItem(props) {
+  const { date, title, amount } = props;
+  const onClick = () => {
+    console.log('update Title');
+  };
 
   return (
     <Card className="expense-item">
