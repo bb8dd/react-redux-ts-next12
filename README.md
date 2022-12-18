@@ -163,7 +163,7 @@
       ```js
       import { useState } from 'react'; // named import
 
-      const foo = 'initState';
+      const foo = 'initState'; // 초깃값
 
       const [state, setState] = useState(foo); // useState hook은 배열형태로 초기값과 setState라는 function을 반환
 
@@ -174,6 +174,20 @@
       * 반드시 컴포넌트 내부에 선언되어야 함
       * setState는 state가 포함된 컴포넌트만을 업데이트한 후 리렌더링하도록 트리거 역할을 함
       * setState로 값을 업데이트할 때 바로 값을 바꾸지 않고 state의 업데이트를 예약하기 때문에 다음 줄에 conosle을 찍었을 때 업데이트 이전의 state가 찍힘
+        ```js
+        {data.map(((e) => (
+          <ExpenseItem
+            key={e.id}
+            date={e.date}
+            title={e.title}
+            amount={e.amount}
+          />
+        )))}
+        ```
+      * 동일한 컴포넌트가 여러개 렌더링 되었더라도, 각각의 컴포넌트는 독립적인 state를 가짐
+      * Why can use const ?
+        - setState는 state값을 변경하는 것이 아니라, react모듈의 _value를 변경하고 컴포넌트를 리렌더링 시키는 역할을 하고 변경된 값은 useState가 가져옴
+      * 초깃값은 최초 렌더링될 때만 고려됨
 
 ---
 
@@ -190,6 +204,10 @@
 ## React
   * 왜 useState를 작성할 때 const를 사용하여 선언했는데 값을 바꿀 수 있음?
 
+  * setState로 리렌더링될 때 초깃값을 재할당하지 않는 이유
+    * 다시 인수를 useState에 전달하며 호출
+    * useState는 내부적으로 _value값을 확인하고, undefined가 아닌 값(초깃값)이 할당되어 있기 때문에 초기값 할당문을 실행하지 않음
+    * 이후 현재시점의 _value와 setState를 반환 
   
   * useState에 파라미터형식과 함수형 업데이트 방식의 차이점은 무엇?
 
