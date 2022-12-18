@@ -105,6 +105,8 @@
   * React 작동 방식
     * 선언형 프로그래밍 방식으로 작동
     * 일반적인 javascript는 명령형으로 단계별로 지시(element 생성 => 추가할 곳 선택 => 추가)를 내려야 하는 반면, 리액트는 최종상태를 정의하여 위치에 선언하는 방식으로 컴포넌트 개념을 채택함 
+    * React는 최초 rendering 될 때 모든 jsx코드와 함수들을 실행하고 값이나 함수가 변경되었을 때 Component를 다시 실행하라고 trigger하지 않기 때문에 state(상태)가 update되었음을 react에 알려주어야 함
+
   
   * App.js의 역할
     * Components Tree의 최상단으로 index.js에서 렌더링 될 때 최상단에 있는 App.js가 렌더링 됨
@@ -156,7 +158,21 @@
       // <div><div>title</div></div>
     }
     ```
-    
+  * React Hooks
+    * `useState`
+      ```js
+      import { useState } from 'react'; // named import
+
+      const foo = 'initState';
+
+      const [state, setState] = useState(foo); // useState hook은 배열형태로 초기값과 setState라는 function을 반환
+
+      const updateState = () => {
+        setState('updateState');
+      }
+      ```
+      * 반드시 컴포넌트 내부에 선언되어야 함
+      * setState는 state가 포함된 컴포넌트만을 업데이트한 후 리렌더링하도록 트리거 역할을 함
 
 ---
 
