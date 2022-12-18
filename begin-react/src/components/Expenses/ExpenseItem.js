@@ -4,9 +4,9 @@ import './ExpenseItem.css';
 import Card from '../UI/Card';
 
 export default function ExpenseItem(props) {
-  const { date, dataTitle, amount } = props;
+  const { date, title, amount } = props;
 
-  const [title, setTitle] = useState(dataTitle);
+  const [updateTitle, setTitle] = useState(title);
 
   const onClick = () => {
     setTitle('Update Title');
@@ -16,7 +16,7 @@ export default function ExpenseItem(props) {
     <Card className="expense-item">
       <ExpenseDate date={date} />
       <div className="expense-item__description">
-        <h2>{title}</h2>
+        <h2>{updateTitle}</h2>
         <div className="expense-item__price">
           $
           {amount}
