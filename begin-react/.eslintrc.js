@@ -21,5 +21,6 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'no-unused-vars': 0,
     'react/prop-types': 'off', // react 프로토 타입 지정오류
+    'jsx-a11y/label-has-associated-control': 0, // label input control error
   },
 };
