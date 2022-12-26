@@ -205,6 +205,7 @@
   * 왜 useState를 작성할 때 const를 사용하여 선언했는데 값을 바꿀 수 있음?
 
   * setState로 리렌더링될 때 초깃값을 재할당하지 않는 이유
+    * https://velog.io/@jjunyjjuny/React-useState%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8F%99%EC%9E%91%ED%95%A0%EA%B9%8C
     * 다시 인수를 useState에 전달하며 호출
     * useState는 내부적으로 _value값을 확인하고, undefined가 아닌 값(초깃값)이 할당되어 있기 때문에 초기값 할당문을 실행하지 않음
     * 이후 현재시점의 _value와 setState를 반환 
