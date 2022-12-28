@@ -1,10 +1,9 @@
 import React from 'react';
 import './ExpenseForm.css';
 
-function ExpenseForm(props) {
+function ExpenseForm() {
   // 구조분해 할당 할 때 prpos를 먼저 받고 할당하는 게 좋은 지
   // props를 아예 구조분해 할당으로 받는 게 좋을 지
-  const { title, amount, date } = props;
 
   const titleChangeHandler = (event) => {
     console.log(event.target.value);
