@@ -13,7 +13,7 @@ module.exports = {
   overrides: [
   ],
   parserOptions: {
-    project: ['tsconfig.json'],
+    project: ['./begin-react/tsconfig.json'],
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
