@@ -1,29 +1,32 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
+  parser: '@typescript-eslint/parser',
   extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
     'airbnb',
-    'airbnb/hooks',
+    'airbnb-typescript'
   ],
   overrides: [
   ],
   parserOptions: {
+    project: ['./begin-react/tsconfig.json'],
     ecmaVersion: 'latest',
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: [
-    'react',
+    '@typescript-eslint',
+    'react'
   ],
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'linebreak-style': 0,
-    'no-unused-vars': 0,
-    'react/prop-types': 'off',
-    'default-param-last': 0,
-    'no-plusplus': 0,
-    'react/react-in-jsx-scope': 'off',
-    'jsx-a11y/label-has-associated-control': 0, // label input control error
+    'linebreak-style': 0, // Expected linebreaks to be 'LF' but found 'CRLF'
+    'jsx-a11y/label-has-associated-control': 0, // label has associated control off
+    '@typescript-eslint/member-delimiter-style': 'error' , // interface, type need semi
+    '@typescript-eslint/semi': 'error', // ts type에서 중괄호 끝 세미콜론 추가
+    
   },
-};
+  ignorePatterns: ['.eslintrc.js']
+}
