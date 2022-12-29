@@ -3,7 +3,13 @@ import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 import Card from '../UI/Card';
 
-export default function ExpenseItem(props) {
+interface ExpenseItemProps {
+  date: Date;
+  title: string;
+  amount: number;
+}
+
+export default function ExpenseItem(props: ExpenseItemProps) {
   const { date, title, amount } = props;
 
   const [updateTitle, setTitle] = useState(title);

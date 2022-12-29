@@ -1,10 +1,9 @@
 import React from 'react';
-import ExpenseItem from './components/Expenses/ExpenseItem';
+import './App.css';
 import Expenses from './components/Expenses/Expenses';
-import NewExpense from './NewExpenses/NewExpense';
 
 function App() {
-  const data = [
+  const ExpenseData: ExpenseDate[] = [
     {
       id: 1,
       title: 'Car',
@@ -27,8 +26,7 @@ function App() {
 
   return (
     <div>
-      <NewExpense />
-      <Expenses data={data} />
+      <Expenses data={ExpenseData} />
     </div>
   );
 }
