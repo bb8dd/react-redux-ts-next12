@@ -3,7 +3,7 @@ import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
 
-export default function Expenses({ data }: { data: ExpenseDate[] }) {
+export default function Expenses({ data }: { data: ExpenseData[] }) {
   return (
     <Card className="expenses">
       {data.map(((e) => (

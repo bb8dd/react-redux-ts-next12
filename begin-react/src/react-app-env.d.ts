@@ -1,6 +1,6 @@
 /// <reference types="react-scripts" />
 
-interface ExpenseDate {
+interface ExpenseData {
   id: number;
   title: string;
   amount: number;

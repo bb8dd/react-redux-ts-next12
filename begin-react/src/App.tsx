@@ -4,7 +4,7 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpenses/NewExpense';
 
 function App() {
-  const ExpenseData: ExpenseDate[] = [
+  const ExpenseData: ExpenseData[] = [
     {
       id: 1,
       title: 'Car',
