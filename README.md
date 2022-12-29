@@ -231,6 +231,15 @@
       // empty
     }
 
+## react + ts 
+  * ReactNode vs. JSX.Element 그리고 ReactElement
+    * ReactNode
+      - ReactNode는 ReactElement를 비롯하여 대부분의 JS 데이터 타입을 아우르는 범용적인 타입 (Element계의 any)
+      ```ts
+      // index.d.ts
+      type ReactNode = ReactElement | string | number | ReactFragment | ReactPortal | boolean | null | undefined;
+      ```
+
 ---
 
 # trobleShooting
