@@ -3994,6 +3994,14 @@ eslint-config-airbnb@^19.0.4:
     object.assign "^4.1.2"
     object.entries "^1.1.5"
 
+eslint-config-bb8dd@^1.0.31:
+  version "1.0.31"
+  resolved "https://registry.yarnpkg.com/eslint-config-bb8dd/-/eslint-config-bb8dd-1.0.31.tgz#dc3623c7f6fe8dcad1f4c0b6d1978cf300a81f87"
+  integrity sha512-7UCcDjmeogCjDGJxYGXZoF28jh3RPUd2sLBjh7byi6qfBxitc2F9egn/S0dVPMlxCSqQcMiJOVh8pPIcvFg/Tg==
+  dependencies:
+    "@typescript-eslint/parser" "^5.47.1"
+    eslint-config-airbnb-typescript "^17.0.0"
+
 eslint-config-react-app@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/eslint-config-react-app/-/eslint-config-react-app-7.0.1.tgz#73ba3929978001c5c86274c017ea57eb5fa644b4"
