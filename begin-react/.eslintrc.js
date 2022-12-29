@@ -17,10 +17,13 @@ module.exports = {
     'react',
   ],
   rules: {
-    'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'linebreak-style': 0,
     'no-unused-vars': 0,
-    'react/prop-types': 'off', // react 프로토 타입 지정오류
+    'react/prop-types': 'off',
+    'default-param-last': 0,
+    'no-plusplus': 0,
+    'react/react-in-jsx-scope': 'off',
     'jsx-a11y/label-has-associated-control': 0, // label input control error
   },
 };
