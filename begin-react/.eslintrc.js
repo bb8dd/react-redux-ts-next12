@@ -13,7 +13,7 @@ module.exports = {
   overrides: [
   ],
   parserOptions: {
-    project: ['./begin-react/tsconfig.json'],
+    project: './begin-react/tsconfig.json',
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
@@ -24,9 +24,8 @@ module.exports = {
   rules: {
     'linebreak-style': 0, // Expected linebreaks to be 'LF' but found 'CRLF'
     'jsx-a11y/label-has-associated-control': 0, // label has associated control off
-    '@typescript-eslint/member-delimiter-style': 'error' , // interface, type need semi
-    '@typescript-eslint/semi': 'error', // ts type에서 중괄호 끝 세미콜론 추가
-    
+    '@typescript-eslint/member-delimiter-style': 'error', // interface, type need semi
+    '@typescript-eslint/semi': 'error' // ts type에서 중괄호 끝 세미콜론 추가
   },
   ignorePatterns: ['.eslintrc.js']
 }
