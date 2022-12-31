@@ -1,13 +1,22 @@
 // eslint-disable-next-line import/no-unresolved
-import React from 'react';
+import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 function ExpenseForm() {
-  // 구조분해 할당 할 때 props를 먼저 받고 할당하는 게 좋은 지
-  // props를 아예 구조분해 할당으로 받는 게 좋을 지
+  const [enteredTitle, setenteredTitle] = useState('');
+  const [enteredAmount, setenteredAmount] = useState('');
+  const [enteredDate, setenteredDate] = useState('');
 
   const titleChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
+    setenteredTitle(event.target.value);
+  };
+  const amountChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setenteredAmount(event.target.value);
+    console.log(enteredAmount);
+  };
+  const dateChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setenteredDate(event.target.value);
+    console.log(enteredDate);
   };
 
   return (
@@ -15,15 +24,15 @@ function ExpenseForm() {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input type="text" onChange={titleChangeHandler} value={enteredTitle} />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
-          <input type="number" min="1" step="0" />
+          <input type="number" min="1" step="0" onChange={amountChangeHandler} />
         </div>
         <div className="new-expense__control">
           <label>Date</label>
-          <input type="date" min="2020-01-01" max="2023-12-31" />
+          <input type="date" min="2020-01-01" max="2023-12-31" onChange={dateChangeHandler} />
         </div>
       </div>
       <div>
