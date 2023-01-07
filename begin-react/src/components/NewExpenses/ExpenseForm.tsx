@@ -15,7 +15,7 @@ function ExpenseForm() {
     console.log(enteredAmount);
   };
   const dateChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setenteredDate(event.target.value);
+    setenteredDate(`${event.target.value}`);
     console.log(enteredDate);
   };
 
