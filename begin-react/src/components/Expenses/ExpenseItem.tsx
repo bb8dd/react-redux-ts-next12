@@ -25,7 +25,9 @@ export default function ExpenseItem(props: ExpenseItemProps) {
         <h2>{updateTitle}</h2>
         <div className="expense-item__price">
           $
+          {' '}
           {amount}
+          {' '}
         </div>
       </div>
       <button type="button" onClick={onClick}>Change Title</button>

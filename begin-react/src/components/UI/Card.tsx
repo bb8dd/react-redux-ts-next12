@@ -1,10 +1,14 @@
+// Refactored Code
 import React from 'react';
 import './Card.css';
 
-function Card({ children, className }: { children: React.ReactNode; className: string }) {
-  return (
-    <div className={`card ${className}`}>{children}</div>
-  );
+interface CardProps {
+  children: React.ReactNode;
+  className: string;
+}
+
+function Card({ children, className }: CardProps) {
+  return <div className={`card ${className}`}>{children}</div>;
 }
 
 export default Card;
