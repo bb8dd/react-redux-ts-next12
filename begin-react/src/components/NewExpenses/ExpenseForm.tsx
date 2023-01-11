@@ -8,24 +8,23 @@ function ExpenseForm() {
     enteredAmount: '',
     enteredDate: '',
   });
+  const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { type } = event.target;
+    switch (type) {
+      case 'text':
+        setUserInput((e) => ({ ...e, enteredTitle: event.target.value }));
+        break;
+      case 'number':
+        setUserInput((e) => ({ ...e, enteredAmount: event.target.value }));
+        break;
+      case 'date':
+        setUserInput((e) => ({ ...e, enteredDate: `${event.target.value}` }));
+        break;
+      default:
+        break;
+    }
 
-  const titleChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUserInput({
-      ...userInput,
-      enteredTitle: event.target.value,
-    });
-  };
-  const amountChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUserInput({
-      ...userInput,
-      enteredAmount: event.target.value,
-    });
-  };
-  const dateChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUserInput({
-      ...userInput,
-      enteredDate: `${event.target.value}`,
-    });
+    console.log(userInput);
   };
 
   return (
@@ -33,15 +32,15 @@ function ExpenseForm() {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input type="text" onChange={changeHandler} />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
-          <input type="number" min="1" step="0" onChange={amountChangeHandler} />
+          <input type="number" min="1" step="0" onChange={changeHandler} />
         </div>
         <div className="new-expense__control">
           <label>Date</label>
-          <input type="date" min="2020-01-01" max="2023-12-31" onChange={dateChangeHandler} />
+          <input type="date" min="2020-01-01" max="2023-12-31" onChange={changeHandler} />
         </div>
       </div>
       <div>
