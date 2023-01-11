@@ -2,6 +2,12 @@
 import React, { useState } from 'react';
 import './ExpenseForm.css';
 
+interface FormData {
+  title: string;
+  amount: number;
+  date: Date;
+}
+
 function ExpenseForm() {
   const [userInput, setUserInput] = useState({
     enteredTitle: '',
@@ -23,12 +29,23 @@ function ExpenseForm() {
       default:
         break;
     }
+  };
+  const submitHandler = (evnet: React.FormEvent<HTMLFormElement>) => {
+    evnet.preventDefault();
+    const amount = Number(userInput.enteredAmount);
+    console.log(typeof amount);
 
-    console.log(userInput);
+    const expenseData: FormData = {
+      title: userInput.enteredTitle,
+      amount: Number(userInput.enteredAmount),
+      date: new Date(userInput.enteredDate),
+    };
+
+    console.log(expenseData);
   };
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
