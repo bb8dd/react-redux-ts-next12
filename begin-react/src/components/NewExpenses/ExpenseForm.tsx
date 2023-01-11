@@ -32,14 +32,17 @@ function ExpenseForm() {
   };
   const submitHandler = (evnet: React.FormEvent<HTMLFormElement>) => {
     evnet.preventDefault();
-    const amount = Number(userInput.enteredAmount);
-    console.log(typeof amount);
 
     const expenseData: FormData = {
       title: userInput.enteredTitle,
       amount: Number(userInput.enteredAmount),
       date: new Date(userInput.enteredDate),
     };
+    setUserInput((e) => ({
+      enteredTitle: '',
+      enteredAmount: '',
+      enteredDate: '',
+    }));
 
     console.log(expenseData);
   };
@@ -49,15 +52,15 @@ function ExpenseForm() {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={changeHandler} />
+          <input type="text" onChange={changeHandler} value={userInput.enteredTitle} />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
-          <input type="number" min="1" step="0" onChange={changeHandler} />
+          <input type="number" min="1" step="0" onChange={changeHandler} value={userInput.enteredAmount} />
         </div>
         <div className="new-expense__control">
           <label>Date</label>
-          <input type="date" min="2020-01-01" max="2023-12-31" onChange={changeHandler} />
+          <input type="date" min="2020-01-01" max="2023-12-31" onChange={changeHandler} value={userInput.enteredDate} />
         </div>
       </div>
       <div>
