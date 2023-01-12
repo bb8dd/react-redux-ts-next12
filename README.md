@@ -233,7 +233,7 @@
     const Greet = ({age = 21} : GreetProps) => {
       // empty
     }
-```
+    ```
 
 ## react + ts 
   * ReactNode vs. JSX.Element 그리고 ReactElement
