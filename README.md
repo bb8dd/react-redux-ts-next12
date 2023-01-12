@@ -201,6 +201,9 @@
   * const(상수)로 선언한 배열에 push와 pop이 작동하는 이유
     * pointer?
 
+  * new Array()로 만든 배열의 요소는 비어있음으로 명시되어 있는데, 추출 시 undeifined로 나옴, 근데 인덱스로 undefined를 할당하면 비어있음이라고 나오지 않음
+
+
 ## React
   * 왜 useState를 작성할 때 const를 사용하여 선언했는데 값을 바꿀 수 있음?
 
@@ -230,6 +233,7 @@
     const Greet = ({age = 21} : GreetProps) => {
       // empty
     }
+```
 
 ## react + ts 
   * ReactNode vs. JSX.Element 그리고 ReactElement
@@ -245,5 +249,4 @@
 # troubleShooting
   * reference error cannot access before initialization
     * TDZ 때문에 발생하는 오류
-    ```
 
